@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0">
+
+  <title>Smart Attendance System</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- FONT AWESOME -->
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+
+  <div class="sidebar">
+
+    <div class="logo-box">
+
+      <img
+      src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png">
+
+      <h2>Attendance</h2>
+
+    </div>
+
+    <ul>
+
+      <li>
+        <i class="fa fa-house"></i>
+        Dashboard
+      </li>
+
+      <li>
+        <i class="fa fa-user-graduate"></i>
+        Students
+      </li>
+
+      <li>
+        <i class="fa fa-chart-line"></i>
+        Reports
+      </li>
+
+    </ul>
+
+  </div>
+
+  <!-- MAIN -->
+
+  <div class="main">
+
+    <!-- LOGIN PAGE -->
+
+    <div class="login-page"
+    id="loginPage">
+
+      <div class="login-box">
+
+        <img
+        class="login-img"
+        src="https://cdn-icons-png.flaticon.com/512/2995/2995620.png">
+
+        <h1>Admin Login</h1>
+
+        <input
+        type="text"
+        id="username"
+        placeholder="Enter Username">
+
+        <input
+        type="password"
+        id="password"
+        placeholder="Enter Password">
+
+        <button id="loginBtn">
+          Login
+        </button>
+
+        <p id="error"></p>
+
+      </div>
+
+    </div>
+
+    <!-- DASHBOARD -->
+
+    <div class="dashboard hidden"
+    id="dashboard">
+
+      <div class="top-bar">
+
+        <h1>
+          <i class="fa fa-school"></i>
+          Smart Attendance System
+        </h1>
+
+        <button id="logoutBtn">
+          Logout
+        </button>
+
+      </div>
+
+      <!-- BANNER -->
+
+      <div class="banner">
+
+        <img
+        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+
+        <div class="banner-text">
+
+          <h2>
+            Welcome Admin 👋
+          </h2>
+
+          <p>
+            Manage Student Attendance Easily
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- CARDS -->
+
+      <div class="cards">
+
+        <div class="card">
+
+          <i class="fa fa-users"></i>
+
+          <h2 id="totalStudents">
+            0
+          </h2>
+
+          <p>Total Students</p>
+
+        </div>
+
+        <div class="card">
+
+          <i class="fa fa-chart-pie"></i>
+
+          <h2 id="avgAttendance">
+            0%
+          </h2>
+
+          <p>Average Attendance</p>
+
+        </div>
+
+      </div>
+
+      <!-- ADD BOX -->
+
+      <div class="add-box">
+
+        <input
+        type="text"
+        id="studentName"
+        placeholder="Enter Student Name">
+
+        <button id="addBtn">
+          Add Student
+        </button>
+
+        <input
+        type="text"
+        id="search"
+        placeholder="Search Student">
+
+      </div>
+
+      <!-- TABLE -->
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>Name</th>
+            <th>Present</th>
+            <th>Total</th>
+            <th>Percentage</th>
+            <th>Actions</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody id="studentList"></tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
